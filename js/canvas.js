@@ -1,3 +1,6 @@
+/* 
+ * author：Qyujie
+ */
 $(function() {
 	var canvas = document.getElementById("mycanvas"),
 		ctx = canvas.getContext("2d"),
@@ -58,20 +61,15 @@ $(function() {
 		ctx.fill();
 	}
 
-	function drawRect(rect) { //绘制矩形
-		ctx.fillStyle = rect.rectColor;
-		ctx.fillRect(rect.rectX, rect.rectY, rect.rectWidth, rect.rectHeight);
-	}
-
 	function getRandomSpeed(minSpeed, maxSpeed) { //获得一个速度
 		return Math.random() * (maxSpeed - minSpeed) + minSpeed;
 	}
 
-	function grtRandomColor() {
+	function grtRandomColor() {//获得一个颜色
 		return "rgba(" + Math.random() * 255 + "," + Math.random() * 255 + "," + Math.random() * 255 + "," + (Math.random() * 3 + 7) / 10 + ")";
 	}
 
-	function getRandomDiarcion() {
+	function getRandomDiarcion() {//获得一个运动方向
 		return Math.PI * 2 * Math.random();
 	}
 
